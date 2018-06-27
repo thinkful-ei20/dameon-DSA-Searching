@@ -64,6 +64,9 @@ class App extends Component {
     })
     console.log(this.input.value);
     let value = parseInt(this.input.value,10);
+    console.log(this.state.numbers.sort(function compareNumbers(a, b) {
+      return a - b;
+    }))
     this.binarySearch(this.state.numbers.sort(function compareNumbers(a, b) {
       return a - b;
     }),value);
